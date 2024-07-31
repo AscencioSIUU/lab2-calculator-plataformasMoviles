@@ -1,0 +1,148 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"3401577d-3362-40cf-a594-3d6c40ca99b3\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/lab2Calculator/src/main/kotlin/Tokenizer.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/lab2Calculator/src/main/kotlin/ExpressionConverter.kt\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 5\n}</component>\n  <component name=\"ProjectId\" id=\"2jkMzn3wGv0sLU78hJVx1mkPpnH\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"D:/UVG/2024/Ciclo2/PlataformasMoviles/lab2-calculator-plataformasMoviles/lab2Calculator\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62\" />\n        <option value=\"bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"3401577d-3362-40cf-a594-3d6c40ca99b3\" name=\"Changes\" comment=\"\" />\n      <created>1721926885398</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1721926885398</updated>\n      <workItem from=\"1721926886452\" duration=\"54000\" />\n      <workItem from=\"1722376930072\" duration=\"413000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 27c98ebb07837e000276d2b5773796fbeba7b166)
++++ b/.idea/workspace.xml	(date 1722388550732)
+@@ -5,7 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="3401577d-3362-40cf-a594-3d6c40ca99b3" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/lab2Calculator/src/main/kotlin/Tokenizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2Calculator/src/main/kotlin/ExpressionConverter.kt" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/lab2Calculator/src/main/kotlin/OperatorsTest.kt" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -15,6 +15,18 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "LingnaC"
++  }
++}]]></component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/AscencioSIUU/lab2-calculator-plataformasMoviles.git",
++    "accountId": "8a2d561a-5a18-4f40-a566-5580f3307459"
++  }
++}]]></component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 5
+ }</component>
+@@ -28,7 +40,7 @@
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "git-widget-placeholder": "main",
+     "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "D:/UVG/2024/Ciclo2/PlataformasMoviles/lab2-calculator-plataformasMoviles/lab2Calculator",
++    "last_opened_file_path": "/Users/hp/Desktop/JetKotlin/lab2-calculator-plataformasMoviles/lab2Calculator/src/main/kotlin",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+     "node.js.selected.package.eslint": "(autodetect)",
+@@ -37,6 +49,11 @@
+     "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/lab2Calculator/src/main/kotlin" />
++    </key>
++  </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+@@ -61,4 +78,15 @@
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+ </project>
+\ No newline at end of file
+Index: lab2Calculator/src/main/kotlin/OperatorsTest.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lab2Calculator/src/main/kotlin/OperatorsTest.kt b/lab2Calculator/src/main/kotlin/OperatorsTest.kt
+new file mode 100644
+--- /dev/null	(date 1722388338850)
++++ b/lab2Calculator/src/main/kotlin/OperatorsTest.kt	(date 1722388338850)
+@@ -0,0 +1,62 @@
++import org.junit.jupiter.api.Assertions.assertEquals
++import org.junit.jupiter.api.Test
++
++class OperatorsTest {
++
++    @Test
++    fun testAddition() {
++        val result = Operators.evaluate("(1 + 2) + (3 + 4)")
++        assertEquals(10.0, result)
++    }
++
++    @Test
++    fun testSubtraction() {
++        val result = Operators.evaluate("(10 - 2) - (3 - 1)")
++        assertEquals(6.0, result)
++    }
++
++    @Test
++    fun testMultiplication() {
++        val result = Operators.evaluate("(2 * 3) * (4 * 5)")
++        assertEquals(120.0, result)
++    }
++
++    @Test
++    fun testExactDivision() {
++        val result = Operators.evaluate("(100 / 2) / (25 / 5)")
++        assertEquals(10.0, result)
++    }
++
++    @Test
++    fun testPower() {
++        val result = Operators.evaluate("(2 ^ 3) ^ 2")
++        assertEquals(64.0, result)
++    }
++
++    @Test
++    fun testRoot() {
++        val result = Operators.evaluate("sqrt(16)")
++        assertEquals(4.0, result)
++    }
++
++    @Test
++    fun testExponential() {
++        val result = Operators.evaluate("exp(1)")
++        assertEquals(Math.E, result, 0.0001)
++    }
++
++    @Test
++    fun testComplexExpression() {
++        val result = Operators.evaluate("(454 + (34 / 2) ^ 3) + 5")
++        assertEquals(15821.0, result)
++    }
++
++    @Test
++    fun testSyntaxError() {
++        try {
++            Operators.evaluate("(1 + 2))")
++        } catch (e: Exception) {
++            assertEquals("Syntax Error", e.message)
++        }
++    }
++}
