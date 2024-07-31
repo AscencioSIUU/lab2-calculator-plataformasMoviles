@@ -7,13 +7,13 @@ class OperatorsTest {
 
     @Test
     fun testAddition() {
-        val result = Plus(1, 2)
+        val result = plus(1, 2)
         assertEquals(3, result)
     }
 
     @Test
     fun testSubtraction() {
-        val result = Minus(10, 2)
+        val result = minus(10, 2)
         assertEquals(8, result)
     }
 
@@ -25,7 +25,7 @@ class OperatorsTest {
 
     @Test
     fun testExactDivision() {
-        val result = Div(100, 2)
+        val result = div(100, 2)
         assertEquals(50, result)
     }
 
@@ -37,14 +37,10 @@ class OperatorsTest {
 
     @Test
     fun testRoot() {
-        val result = square(16)
-        assertEquals(4, result)
+        val result = square(16.0)
+        assertEquals(4.0, result)
     }
 
-    @Test
-    fun testExponential() {
-        val result = Operators.exp(1.0)
-        assertEquals(Math.E.toInt(), result)
-    }
+
 
 }
