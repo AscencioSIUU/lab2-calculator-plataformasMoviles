@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3401577d-3362-40cf-a594-3d6c40ca99b3" name="Changes" comment="implementaciones">
-      <change beforePath="$PROJECT_DIR$/lab2Calculator/src/main/kotlin/Expression.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2Calculator/src/main/kotlin/ExpressionConverter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2Calculator/src/main/kotlin/ExpressionConverter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab2Calculator/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lab2Calculator/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +74,7 @@
       <updated>1721926885398</updated>
       <workItem from="1721926886452" duration="54000" />
       <workItem from="1722376930072" duration="413000" />
-      <workItem from="1722399563821" duration="417000" />
+      <workItem from="1722399563821" duration="1149000" />
     </task>
     <task id="LOCAL-00001" summary="implementaciones">
       <option name="closed" value="true" />

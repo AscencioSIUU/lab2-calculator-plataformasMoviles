@@ -52,10 +52,10 @@ class ExpressionConverter {
     }
 }
 
-fun main(){
-    val expressionConverter = ExpressionConverter()
-    val postfixTest = expressionConverter.infixToPostfix("e ^ 2 + r 10 - 29 * 45 / (8 +99)")
-    println(postfixTest)
-}
+//fun main(){
+//    val expressionConverter = ExpressionConverter()
+//    val postfixTest = expressionConverter.infixToPostfix("e ^ 2 + r 10 - 29 * 45 / (8 +99)")
+//    println(postfixTest)
+//}
 
 

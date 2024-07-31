@@ -1,10 +1,10 @@
 package org.example
 
-import java.beans.Expression
-
 fun main() {
-    private val validator = ExpressionValidator()
-    private val converter = ExpressionConverter()
+    val validator = ExpressionValidator()
+    val converter = ExpressionConverter()
+    val calculator = PostfixCalculator()
+
     println("Bienvenido a la Mejor Calculadora del Mundo")
     var cycle = true
 
@@ -16,14 +16,21 @@ fun main() {
         val areParenthesesValid = validator.validateParenthesis(input)
 
         if(!areParenthesesValid){
-            println("Expresion contiene paréntesis no balanceados")
+            println("Expresión contiene paréntesis no balanceados")
+            continue
+        }
+        if(!areCharactersValid){
+            println("Expresión contiene caracteres no validos")
+            continue
         }
 
-        val postFixString = converter.infixToPostfix(areParenthesesValid)
+        val postFixString = converter.infixToPostfix(input)
 
+        val result = calculator.calculate(postFixString)
+        println("El resultado de la expresión es: $result")
 
-
-
-
+        print("Quiere evaluar otra expresión? (si/no): ")
+        val response = readLine()!!
+        cycle = response.lowercase() == "si"
     }
 }
