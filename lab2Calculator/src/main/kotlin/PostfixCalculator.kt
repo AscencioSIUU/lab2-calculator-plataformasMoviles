@@ -1,28 +1,25 @@
 package org.example
 
 class PostfixCalculator {
-    fun calculate(postfixExpression: MutableList<Char>): Int{
-        val operators = listOf('+', '-', '*', '/', '^', 'r')
+    fun calculate(postfixExpression: MutableList<String>): Int{
+        val operators = listOf<String>("+", "-", "*", "/", "^", "r", " ")
         var operand1 = ""
         var operand2 = ""
-        var isOperand1 = true
-        for (char in postfixExpression){
-            if(char == ' ' && operand2 == ""){
-                isOperand1 = false
+        while(postfixExpression.isNotEmpty()){
+            operand1 = postfixExpression.removeLast();
+            if(postfixExpression.last() == "r"){
+                postfixExpression.removeLast();
+                postfixExpression.add(getResult(operand1, operand2, "r").toString())
+                continue
             }
-            else if(char !in operators && isOperand1) {
-                operand1 = operand1 + char
-            }
-            else if(char !in operators && !isOperand1) {
-                operand2 = operand2 + char
-            }else{
-                get
-            }
-
+            operand2 = postfixExpression.removeLast();
+            postfixExpression.add(getResult(operand1, operand2, postfixExpression.removeLast()).toString())
         }
+
+        return postfixExpression.removeLast().toInt()
     }
 
-    private fun getResult(operand1: String, operand2: String, operator: String): Int{
+     fun getResult(operand1: String, operand2: String, operator: String): Int{
         return when (operator){
             "+" -> plus(operand1.toInt(), operand2.toInt())
             "-" -> minus(operand1.toInt(), operand2.toInt())
@@ -30,6 +27,7 @@ class PostfixCalculator {
             "/" -> div(operand1.toInt(), operand2.toInt())
             "^" -> power(operand1.toDouble(), operand2.toDouble())
             "r" -> square(operand1.toDouble())
+            else -> 0
 
         }
     }

@@ -1,7 +1,7 @@
 package org.example
 
 class ExpressionConverter {
-    fun infixToPostfix( expression: String): String {
+    fun infixToPostfix( expression: String): List<String> {
         val stack = mutableListOf<Char>();
         val postfix = mutableListOf<Char>();
         val numbersOrSpace = listOf<Char>('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'e',' ')
@@ -36,7 +36,7 @@ class ExpressionConverter {
 
         }
 
-        return postfix.joinToString("");
+        return postfix.joinToString("").split(" ");
     }
 
     private fun getPrecedence(char: Char): Int{
