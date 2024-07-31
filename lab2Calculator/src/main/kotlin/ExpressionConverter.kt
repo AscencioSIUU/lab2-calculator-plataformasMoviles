@@ -1,35 +1,61 @@
 package org.example
 
-fun infixToPostfix( expression: String = "hi"){
-    val stack = mutableListOf<Char>();
-    val postfix = mutableListOf<Char>();
-    val numbersOrSpace = listOf<Char>('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ' ')
+class ExpressionConverter {
+    fun infixToPostfix( expression: String): MutableList<Char> {
+        val stack = mutableListOf<Char>();
+        val postfix = mutableListOf<Char>();
+        val numbersOrSpace = listOf<Char>('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'e',' ')
 
-    println(numbersOrSpace.toString())
 
-    for (char in expression){
-        when(char){
-            in numbersOrSpace.toString() -> postfix.add(char)
-            '(' -> stack.add(char)
-            'e' -> stack.add(char)
-            'r' -> stack.add(char)
-            ')' -> {
-                while (stack.isNotEmpty() && stack.last() != '('){
-                    postfix.add(stack.removeLast())
+        for (char in expression) {
+            when (char) {
+                in numbersOrSpace -> postfix.add(char)
+                '(' -> stack.add(char)
+                'r' -> stack.add(char)
+                '^' -> stack.add(char)
+                ')' -> {
+                    while (stack.isNotEmpty() && stack.last() != '(') {
+                        postfix.add(stack.removeLast())
+                    }
+                    stack.removeLast()
+                }
+
+                else -> {
+                    while (stack.isNotEmpty() && getPrecedence(char) <= getPrecedence(stack.last())) {
+                        postfix.add(stack.removeLast())
+
+                    }
+                    stack.add(char)
                 }
             }
-            else -> {
-                while (stack.isNotEmpty() && stack.last() != 'e' && stack.last() != 'r'){
-                    postfix.add(stack.removeLast())
 
-                }
-               stack.add(char)
-            }
+        }
+
+        while (stack.isNotEmpty()){
+            postfix.add(stack.removeLast())
+
+        }
+
+        return postfix;
     }
 
+    private fun getPrecedence(char: Char): Int{
+        return when (char) {
+            '+' -> 1;
+            '-' -> 1;
+            '*' -> 2;
+            '/' -> 2;
+            '^' -> 3;
+            'r' -> 3;
+            else -> 0;
+        }
+    }
 }
 
-fun main() {
-    infixToPostfix("1234 ")
+fun main(){
+    val expressionConverter = ExpressionConverter()
+    val postfixTest = expressionConverter.infixToPostfix("3 - 4 * 9")
+    println(postfixTest)
 }
+
 
