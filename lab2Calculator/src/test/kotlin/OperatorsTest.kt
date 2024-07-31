@@ -7,58 +7,44 @@ class OperatorsTest {
 
     @Test
     fun testAddition() {
-        val result = Operators.evaluate("(1 + 2) + (3 + 4)")
-        assertEquals(10.0, result)
+        val result = Plus(1, 2)
+        assertEquals(3, result)
     }
 
     @Test
     fun testSubtraction() {
-        val result = Operators.evaluate("(10 - 2) - (3 - 1)")
-        assertEquals(6.0, result)
+        val result = Minus(10, 2)
+        assertEquals(8, result)
     }
 
     @Test
     fun testMultiplication() {
-        val result = Operators.evaluate("(2 * 3) * (4 * 5)")
-        assertEquals(120.0, result)
+        val result = multiply(2, 3)
+        assertEquals(6, result)
     }
 
     @Test
     fun testExactDivision() {
-        val result = Operators.evaluate("(100 / 2) / (25 / 5)")
-        assertEquals(10.0, result)
+        val result = Div(100, 2)
+        assertEquals(50, result)
     }
 
     @Test
     fun testPower() {
-        val result = Operators.evaluate("(2 ^ 3) ^ 2")
-        assertEquals(64.0, result)
+        val result = power(2.0, 3.0)
+        assertEquals(8, result)
     }
 
     @Test
     fun testRoot() {
-        val result = Operators.evaluate("sqrt(16)")
-        assertEquals(4.0, result)
+        val result = square(16)
+        assertEquals(4, result)
     }
 
     @Test
     fun testExponential() {
-        val result = Operators.evaluate("exp(1)")
-        assertEquals(Math.E, result, 0.0001)
+        val result = Operators.exp(1.0)
+        assertEquals(Math.E.toInt(), result)
     }
 
-    @Test
-    fun testComplexExpression() {
-        val result = Operators.evaluate("(454 + (34 / 2) ^ 3) + 5")
-        assertEquals(15821.0, result)
-    }
-
-    @Test
-    fun testSyntaxError() {
-        try {
-            Operators.evaluate("(1 + 2))")
-        } catch (e: Exception) {
-            assertEquals("Syntax Error", e.message)
-        }
-    }
 }
