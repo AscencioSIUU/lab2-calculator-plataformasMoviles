@@ -1,22 +1,31 @@
 package org.example
 
+
 class PostfixCalculator {
     fun calculate(postfixExpression: MutableList<String>): Int{
-        val operators = listOf<String>("+", "-", "*", "/", "^", "r", " ")
+        val stack = mutableListOf<String>()
+        val operators = listOf<String>("+", "-", "*", "/", "^", "r")
+        var current = ""
         var operand1 = ""
         var operand2 = ""
         while(postfixExpression.isNotEmpty()){
-            operand1 = postfixExpression.removeLast();
-            if(postfixExpression.last() == "r"){
-                postfixExpression.removeLast();
-                postfixExpression.add(getResult(operand1, operand2, "r").toString())
-                continue
+            current = postfixExpression.removeFirst()
+            if (current == "e"){
+                current = " 2.71828"
             }
-            operand2 = postfixExpression.removeLast();
-            postfixExpression.add(getResult(operand1, operand2, postfixExpression.removeLast()).toString())
+            if(current !in operators){
+                stack.add(current)
+            }else if( current == "r"){
+                operand1 = stack.removeLast()
+                stack.add(getResult(operand1, operand2, current).toString())
+            }else{
+                operand1 = stack.removeLast()
+                operand2 = stack.removeLast()
+                stack.add(getResult(operand1, operand2, current).toString())
+            }
         }
 
-        return postfixExpression.removeLast().toInt()
+        return stack.removeLast().toInt()
     }
 
      fun getResult(operand1: String, operand2: String, operator: String): Int{
@@ -31,4 +40,10 @@ class PostfixCalculator {
 
         }
     }
+}
+
+fun main(){
+    val calculator = PostfixCalculator()
+    val list3 = mutableListOf<String>("e", "0", "^", "100", "r", "+", "29", "45", "*", "4", "1", "+", "/", "-")
+    println(calculator.calculate(list3))
 }
